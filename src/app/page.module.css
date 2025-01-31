@@ -1,0 +1,301 @@
+.main {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* Hero Section */
+.heroSection {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: rgba(23, 23, 33, 0.95);
+}
+
+.carousel {
+  height: 100%;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carouselSlide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  gap: 4rem;
+}
+
+.slideContent {
+  flex: 1;
+}
+
+.slideContent h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #60a5fa, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.slideContent p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.slideImage {
+  flex: 1;
+  position: relative;
+}
+
+.projectImage {
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.carouselDots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.activeDot {
+  background: #60a5fa;
+  transform: scale(1.2);
+}
+
+.viewProjectBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #60a5fa, #818cf8);
+  color: white;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.viewProjectBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(96, 165, 250, 0.2);
+}
+
+/* Skills Section */
+.skillsSection {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillsSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #60a5fa, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skillCard {
+  background: rgba(23, 23, 33, 0.95);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.skillBar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skillProgress {
+  height: 100%;
+  background: linear-gradient(90deg, #60a5fa, #818cf8);
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+/* Updated References Section */
+.referencesSection {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.referencesSlider {
+  margin: 2rem -2rem;
+  overflow: hidden;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+  padding: 0 2rem;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.referenceCard {
+  min-width: 400px;
+  background: rgba(23, 23, 33, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.referenceCard:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 30, 40, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.referenceHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.referenceImage {
+  border-radius: 50%;
+  border: 2px solid rgba(96, 165, 250, 0.4);
+}
+
+.referenceHeader h3 {
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.referenceHeader p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.referenceCard blockquote {
+  color: #e2e8f0;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.referenceCard blockquote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+  color: #60a5fa;
+  line-height: 1;
+}
+
+.viewMoreBtn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  background: rgba(96, 165, 250, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carouselSlide {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .slideContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .slideContent p {
+    font-size: 1.1rem;
+  }
+
+  .skillsSection,
+  .referencesSection {
+    padding: 4rem 1rem;
+  }
+
+  .referenceCard {
+    min-width: 300px;
+    padding: 1.5rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+} 

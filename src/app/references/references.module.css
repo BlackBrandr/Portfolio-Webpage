@@ -1,0 +1,152 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 300px); /* Account for footer height */
+}
+
+.section {
+  margin: 4rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #60a5fa, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.referencesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.referenceCard {
+  background: rgba(23, 23, 33, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.referenceCard:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 30, 40, 0.95);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.referenceHeader {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.referenceImage {
+  border-radius: 50%;
+  border: 3px solid rgba(96, 165, 250, 0.4);
+}
+
+.headerInfo h3 {
+  font-size: 1.3rem;
+  color: #e2e8f0;
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  color: #60a5fa;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.referenceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.referenceContent blockquote {
+  color: #e2e8f0;
+  font-style: italic;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.referenceContent blockquote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2.5rem;
+  color: #60a5fa;
+  line-height: 1;
+}
+
+.projectInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.year {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .referencesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .referenceCard {
+    padding: 1.5rem;
+  }
+} 
